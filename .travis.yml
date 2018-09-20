@@ -7,7 +7,7 @@ node_js:
 install:
 - npm ci
 script:
-- npm run travis:verify
+- npm run verify
 after_success:
 - .travis/after_success.sh
 env:
