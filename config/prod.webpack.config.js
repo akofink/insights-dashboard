@@ -5,5 +5,5 @@ const config = _.cloneDeep(require('./base.webpack.config'));
 
 module.exports = _.merge({},
     config,
-    require('./base.webpack.plugins.js')
+    require('./prod.webpack.plugins.js')
 );
