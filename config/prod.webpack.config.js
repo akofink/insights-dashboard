@@ -1,9 +1,9 @@
 /* global require, module */
 
 const _ = require('lodash');
-const webpackConfig = require('./base.webpack.config');
+const config = _.cloneDeep(require('./base.webpack.config'));
 
 module.exports = _.merge({},
-    webpackConfig,
+    config,
     require('./base.webpack.plugins.js')
 );
