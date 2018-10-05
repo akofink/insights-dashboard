@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import ReducerRegistry from './Utilities/ReducerRegistry';
+import { getRegistry } from '@red-hat-insights/insights-frontend-components';
+import logger from 'redux-logger';
 import App from './App';
 
 // makes eslint exception for webpack variable RELEASE
@@ -14,7 +15,7 @@ import App from './App';
  *  https://redux.js.org/advanced/usage-with-react-router
  */
 ReactDOM.render(
-    <Provider store={ReducerRegistry.getStore()}>
+    <Provider store={getRegistry({}, [logger]).getStore()}>
         <Router basename={'/' + RELEASE + '/platform/dashboard'}>
             <App />
         </Router>

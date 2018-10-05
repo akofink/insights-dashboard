@@ -174,5 +174,5 @@ When setting up the routes, the page content is wrapped with a `.page__{pageName
     - Renders the first child <Route> or <Redirect> that matches the location.
 - [Redirect](https://reacttraining.com/react-router/web/api/Redirect)
     - navigate to a new location
-- [withRouter](https://reacttraining.com/react-router/web/api/withRouter)
-    - passes updated match, location, and history props to the wrapped component whenever it renders
+- [routerParams](https://github.com/RedHatInsights/insights-frontend-components/blob/master/doc/utils/routerParams.md)
+    - passes updated match, location, and history props to the wrapped component whenever it renders, plus records where you are located in redux

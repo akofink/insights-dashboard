@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import { Card, CardHeader, CardBody, Title } from '@patternfly/react-core';
-import { Dark, PageHeader, PageHeaderTitle, Main } from '@red-hat-insights/insights-frontend-components';
+import { Dark, PageHeader, PageHeaderTitle, Main, routerParams } from '@red-hat-insights/insights-frontend-components';
 import asyncComponent from '../../Utilities/asyncComponent';
 
 import './_dashboard.scss';
@@ -160,4 +159,4 @@ class Dashboard extends Component {
     }
 }
 
-export default withRouter(Dashboard);
+export default routerParams(Dashboard);
