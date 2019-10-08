@@ -55,7 +55,11 @@ class ComplianceCard extends Component {
         } = this.props;
 
         return (
-            <Card className='ins-c-card__compliance'>
+            <Card className='ins-c-card__compliance'
+                { ...complianceFetchStatus !== 'pending' ? {
+                    'data-ouia-safe': true
+                } : { 'data-ouia-safe': false } }
+            >
                 <CardHeader>
                     <Title size={ 'lg' }>Compliance</Title>
                 </CardHeader>
